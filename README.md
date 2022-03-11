@@ -1,5 +1,5 @@
 # Web-shop
-Full-stack project with Angular framework for Front-end, MySQL for database, and Java EE for business logic. Dynamic Web app where you can see all new items, items on sale, and other products directly imported from the database. Also, user can fulfill form and their data will be posted in the database. Get and post are possible thanks to RESTful API. 
+Full-stack project with Angular framework for Front-end, MySQL for database, and Java EE for back-end logic. Dynamic Web app where you can see all new items, items on sale, and other products directly imported from the database. Also, user can fulfill form and their data will be posted in the database. Get and post are possible thanks to RESTful API. 
 
 ## Database
 For data we used MySQL Workbench, .sql file need to be full imported in MySQL Workbench 
