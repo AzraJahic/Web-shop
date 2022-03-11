@@ -1,0 +1,102 @@
+/* You can add global styles to this file, and also import other style files */
+.header-h1{
+    margin-top: 15px;
+    margin-left: 15px;
+    font-family: cursive;
+    font-size: medium;
+    float: right;
+}
+.header-background{
+    color: floralwhite;
+    background: rgb(255,0,14);
+    background: linear-gradient(90deg, rgba(255,0,14,0.5802696078431373) 0%, rgba(213,0,0,0.47942927170868344) 17%, rgba(10,10,10,0.10968137254901966) 100%);
+    background-color: transparent 0.7;
+}
+.header-p{
+    margin-top: 50px;
+    margin-right: 10px;
+    font-size: smaller;
+    float:right;
+}
+
+.menu-top-margin {
+    margin-top:5px;
+}
+
+.header-p a:link, a:visited{
+    color: black;
+}
+
+.header-p a:hover, a:active{
+    color: floralwhite;
+}
+
+.container{
+    margin-top: 15px;
+    align-content: center;
+    height: fit-content;
+    padding: 10px;
+    border: 2px solid black;
+}
+.start-new-products{ 
+    margin: 20px;
+    height: fit-content;
+    padding: 10px;
+    border: 2px solid black;
+}
+.start-discounted-products{
+    margin: 20px;
+    height: fit-content;
+    align-content: center;
+    padding: 10px;
+    border: 3px solid red;
+}
+
+.apply-default-margin {
+    margin-top : 20px;
+}
+
+.align-row-l{
+    text-align: left;
+}
+
+.align-row-r{
+    text-align: right;
+}
+
+.src-row{
+    float: left;
+}
+
+.colorTextRow{
+    color: red;
+}
+
+.contact-sectionr{
+    margin-top: 15px;
+}
+
+.contact-p{
+    text-align: justify;
+}
+
+.centered{
+    text-align: center;
+}
+
+.boldovano{
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.footer{
+    text-align: center;
+    font-weight: bolder;
+}
+
+.footer-padding {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  }

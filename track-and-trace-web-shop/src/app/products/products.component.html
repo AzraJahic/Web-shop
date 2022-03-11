@@ -1,0 +1,22 @@
+<div class="container" *ngFor="let product of products">
+<div class="row src-row">
+    <div class="col-sm-6">
+    <!-- <img class="img" src="assets/images/{{ product.idProduct }}.jpg" width="150" height="150" /> -->
+    <img class="img" src="http://localhost:8080/WebShopApp/ImageServlet?imageName={{ product.idProduct }}.jpg" width="150" height="150"/>
+    </div>
+</div>
+<div class="row product-row">
+    <label class="col-sm-2">Naziv: </label>
+    <span class="col-sm-10">{{ product.productName }}</span>
+</div>
+
+<div class="row product-row">
+    <label class="col-sm-2">Opis: </label>
+    <span class="col-sm-10">{{ product.productDescribe }}</span>
+</div>
+
+<div class="row product-row">
+    <label class="col-sm-2">Cijena: </label>
+    <span class="col-sm-10">{{ product.productPrice | currency:"BAM":"symbol-narrow" }}</span>
+</div>
+</div>

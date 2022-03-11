@@ -1,0 +1,88 @@
+<div class="row">
+    <section class="col-sm-8 contact-sectionr">
+        <h3>O nama:</h3>
+        <p class="contact-p">
+           Nastali smo 2020. godine kao jedna mala firma s mnogo ambicija. Vremenom smo nastojali
+           da se razvijemo i dokažemo da možemo biti konkurent na tržištu. Svaki dan nastojimo usvojiti 
+           nova znanja. Firma je odraz pojedinaca koji je čine. Svaki od članova naše male porodice
+           je svjestan da je rad na sebi i sopstveni razvoj ono što nam uljepšava i obogaćuje život 
+           te smo to prenijeli i na našu firmu. Radimo srcem, biramo proizvode u koje mi vjerujemo, 
+           odlučili smo se za branšu koja će uljepšati mnogo života jer će olakšati svakodnevnu fizičku
+           aktivnost koja je izuzetno neophodna za funkcionalnu i zdravu svakodnevnicu. Uživamo što na 
+           ovaj način građanima naše države činimo dostupnim kvalitetne a pristupačne sprave za vježbanje.
+           Naš moto je: nemojte juriti niske cijene, pustite da one dođu Vama. A naša vizija je 
+           da naši proizvodi dođu do svakog doma na vrlo brz i jednostavan način: samo jednim klikom! 
+        </p>
+        <br>
+        <h4>Podaci o narudžbama: </h4>
+        <br>
+        <p class="contact-p">
+            Narudžbu nam možete dostaviti na više načina: 
+            <br>
+            1. Popunjavanjem kontakt forme na ovoj stranici, jednostavnim popunjavanjem polja Message
+            samo nam napišite koji proizvod bi željeli poručiti mi Vam šaljemo potvrdu o narudžbi putem 
+            E-maila koji ste naveli i dodatno putem telefona ili mobitela koji ste naveli.
+            <br>
+            2. Na vrhu naše stranice se nalaze linkovi za naše stranice na društvenim mrežama. Bilo da koristite
+            Facebook ili Instagram, prostim klikom na taj link možete nas kontaktirati na željenoj stranici. I 
+            također napisati koji proizvod vas zanima. I ne brinite, odgovaramo u roku 5 minuta!
+        </p>
+        <br>
+        <h5>Podaci o isporuci narudžbi: </h5>
+        <br>
+        <p class="contact-p">
+            Narudžba se na prostoru Bosne i Hercegovine isporučuje u roku od jednog dana od zaprimljene narudžbe!
+            Naša firma raspolaže vlastitim vozilima koji vrše prevoz artikala do mjesta odredišta, te na taj način
+            osiguravamo brzu isporuku naručenih artikala. Također vrlo ažurno vodimo stanje zaliha u skladištu i 
+            skoro je nemoguće da Vaš željeni proizvod ne dođe na Vašu adresu u najkraćem mogućem roku. Toliko smo
+            sigurni u brzinu naše isporuke, da garantujemo popust od 10% na naručeni proizvod ukoliko isti ne stigne na Vašu 
+            adresu u roku od jednog dana. 
+        </p>
+    </section>
+
+    <section class="col-sm-4 contact-sectionr">
+        <h6 class="boldovano centered">Kontaktirajte nas brzo i jednostavno!</h6>
+        <br /> 
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label>Ime</label>
+                <input type="text" formControlName="name" class="form-control" [ngClass]="{ 'is-invalid': submitted && registerForm.controls['name'].errors }" />
+                <div *ngIf="submitted && registerForm.controls['name'].errors" class="invalid-feedback">
+                    <div *ngIf="registerForm.controls['name'].errors.required">Unos imena je obavezan!</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Prezime</label>
+                <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && registerForm.controls['lastName'].errors }" />
+                <div *ngIf="submitted && registerForm.controls['lastName'].errors" class="invalid-feedback">
+                    <div *ngIf="registerForm.controls['lastName'].errors.required">Unos prezimena je obavezan!</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Telefon</label>
+                <input type="text" formControlName="phoneNumber" class="form-control" [ngClass]="{ 'is-invalid': submitted && registerForm.controls['phoneNumber'].errors }" />
+                <div *ngIf="submitted && registerForm.controls['phoneNumber'].errors" class="invalid-feedback">
+                    <div *ngIf="registerForm.controls['phoneNumber'].errors.required">Unos telefona je obavezan!</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="text" formControlName="clientEmail" class="form-control" [ngClass]="{ 'is-invalid': submitted && registerForm.controls['clientEmail'].errors }" />
+                <div *ngIf="submitted && registerForm.controls['clientEmail'].errors" class="invalid-feedback">
+                    <div *ngIf="registerForm.controls['clientEmail'].errors.required">Unos email-a je obavezan!</div>
+                    <div *ngIf="registerForm.controls['clientEmail'].errors.email">Email nije validan!</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Poruka</label>
+                <input type="text" formControlName="clientMessage" class="form-control" [ngClass]="{ 'is-invalid': submitted && registerForm.controls['clientMessage'].errors }" />
+                <div *ngIf="submitted && registerForm.controls['clientMessage'].errors" class="invalid-feedback">
+                    <div *ngIf="registerForm.controls['clientMessage'].errors.required">Unos poruke je obavezan!</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <button  class="btn btn-primary">Pošalji poruku</button>
+            </div>
+        </form>
+    </section>
+</div>

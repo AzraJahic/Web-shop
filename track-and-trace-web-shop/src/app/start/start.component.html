@@ -1,0 +1,101 @@
+<div class="row">
+<div class="col-sm-3 text-center">
+    <div class="row apply-default-margin">
+        <div class="col-sm-12">
+            <img class="img" src="assets/images/me.jpg" width="300" height="375" />
+        </div>
+    </div>
+    
+    <div class="row apply-default-margin">
+        <div class="col-sm-12">
+            <p><strong>Azra Jahić</strong></p>
+        </div>
+    </div>
+</div>
+
+<div class="col-sm-6">
+    <div class="start-new-products" *ngFor="let product of newProducts" >
+
+        <div class="row product-row colorTextRow">
+            <label class="col-sm-6"><strong>NOVI PROIZVOD!</strong></label>
+        </div>
+
+        <div class="row src-row">
+            <div class="col-sm-6">
+            <!-- <img class="img" src="assets/images/{{ product.idProduct }}.jpg" width="220" height="220" /> -->
+            <img class="img" src="http://localhost:8080/WebShopApp/ImageServlet?imageName={{ product.idProduct }}.jpg" width="220" height="220"/>
+        </div>
+        </div>
+        
+        <div class="row product-row">
+            <label class="col-sm-2">Naziv: </label>
+            <span class="col-sm-10"><strong>{{ product.productName }}</strong></span>
+        </div>
+        
+        <div class="row product-row">
+            <label class="col-sm-2">Opis: </label>
+            <span class="col-sm-10">{{ product.productDescribe }}</span>
+        </div>
+        
+        <div class="row product-row">
+            <label class="col-sm-2">Cijena: </label>
+            <span class="col-sm-10">{{ product.productPrice | currency:"BAM":"symbol-narrow" }}</span>
+        </div>
+    </div>
+    <div class="start-discounted-products" *ngFor="let discountProduct of discountProducts" >
+
+        <div class="row product-row colorTextRow align-row">
+            <label class="col-sm-12"><strong>SNIZENI PROIZVODI!</strong></label>
+        </div>
+        
+        <div class="row product-row ">
+            <label class="col-sm-6 align-row-r">Kupon za snizeni proizvod u procentima: </label>
+            <span class="col-sm-6 align-row-l">{{discountProduct.discount}} %</span>
+        </div>
+        
+        <div class="row product-row">
+            <label class="col-sm-6 align-row-r">Ime proizvoda: </label>
+            <span class="col-sm-6 align-row-l">{{ discountProduct.productName }}</span>
+        </div>
+        
+        <div class="row product-row align-row">
+            <label class="col-sm-6 align-row-r">Stara Cijena: </label>
+            <span class="col-sm-6 align-row-l">{{ discountProduct.oldPrice | currency:"BAM":"symbol-narrow" }}</span>
+        </div>
+
+        <div class="row product-row align-row">
+            <label class="col-sm-6 align-row-r"><strong>Nova Cijena:</strong></label>
+            <span class="col-sm-6 align-row-l"><strong>{{ discountProduct.newPrice | currency:"BAM":"symbol-narrow" }}</strong></span>
+        </div>
+    </div>
+</div>
+
+<div class="col-sm-3 apply-default-margin">
+    <div class="row">
+        <iframe class="col-sm-12" width="400" height="315" src="https://www.youtube.com/embed/XPUNJcVF0zo" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+    </div>
+
+    <div class="row apply-default-margin">
+        <h3>Partneri</h3>
+    </div>
+
+    <div class="row">
+        <h6>Forma GYM</h6>
+        <p>
+            Partner od osnivanja. Zajedno radimo na transformaciji naših klijenata!
+            <a href="https://www.formagym.ba/">https://www.formagym.ba/</a>
+        </p>
+    </div>
+
+    <div class="row">
+        <h6>Body Control</h6>
+        <p>
+            Novi partner s kojim također nastojimo uljepšati Vaš izgled. 
+            <a href="http://bodycontrol.ba/">http://bodycontrol.ba/</a>
+        </p>
+    </div>
+</div>
+
+</div>
