@@ -11,7 +11,7 @@ For data we used MySQL Workbench, .sql file need to be full imported in MySQL Wo
 This part is necessary to be done before everything else, so the app can work properly
 
 ## Servlets
-Servlets necessary for communication between databse and front-end are made as one web dynamic project in "WebShopApp" folder. They are made in Eclipse IDE EE, and they are organised into packages.
+Servlets, necessary for communication between databse and front-end, are made as one web dynamic project in "WebShopApp" folder. They are made in Eclipse IDE EE, and they are organised into packages.
 
 - It's important to add Web Dynamic Project into your eclipse-workspace so that all servlets are working properly, this means that WebShopApp folder need to be on location ../eclipse-workspace/WebShopApp/..
 - When everything is set up properly project will be hosted on TomCat server and will made IP localhost:8080
